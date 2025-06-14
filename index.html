@@ -33,5 +33,24 @@
   <footer>
     <p>&copy; 2025 SkillCash. All rights reserved.</p>
   </footer>
+  <!-- ✅ Consent Banner START -->
+<div id="consent-banner" style="position: fixed; bottom: 0; width: 100%; background: #222; color: white; text-align: center; padding: 1rem; z-index: 9999;">
+  We use cookies and ads to improve your experience. By continuing, you agree to our 
+  <a href="privacy.html" style="color: #ffcc00;">Privacy Policy</a>.
+  <button onclick="acceptConsent()" style="margin-left: 10px; background: #ffcc00; border: none; padding: 5px 10px; border-radius: 4px;">Accept</button>
+</div>
+
+<script>
+function acceptConsent() {
+  localStorage.setItem("consentGiven", "yes");
+  document.getElementById("consent-banner").style.display = "none";
+}
+
+if (localStorage.getItem("consentGiven") === "yes") {
+  document.getElementById("consent-banner").style.display = "none";
+}
+</script>
+<!-- ✅ Consent Banner END -->
+
 </body>
 </html>
