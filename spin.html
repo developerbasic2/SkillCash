@@ -1,10 +1,7 @@
-<h1>🎰 Spin and Win</h1>
-<p>Click to spin and win bonus!</p>
-<button onclick="spin()">Spin</button>
-<p id="bonus"></p>
+<h1>Spin & Earn</h1><button onclick="spin()">Spin Now</button><p id="bonus"></p>
 <script>
 function spin() {
   let reward = Math.floor(Math.random() * 100) + 1;
-  document.getElementById("bonus").innerText = "You won ₹" + reward + " bonus!";
+  document.getElementById("bonus").innerText = "🎁 You won ₹" + reward + "!";
 }
 </script>

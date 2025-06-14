@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SkillCash - Real Money Game</title>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2135039531380773"
-     crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"/>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
     <h1>💰 SkillCash</h1>
-    <p>Real money game: Play, Win, Withdraw!</p>
+    <p>Play to Earn Real Money | ₹50 per quiz | Daily Bonus | Withdraw via UPI</p>
     <nav>
       <a href="quiz.html">Quiz</a>
       <a href="wallet.html">Wallet</a>
@@ -19,38 +18,37 @@
       <a href="admin.html">Admin</a>
     </nav>
   </header>
+
   <main>
     <section class="card">
-      <h2>🔥 Welcome Player!</h2>
-      <p>Earn ₹50 per correct answer!</p>
+      <h2>🎮 Start Playing!</h2>
+      <p>Answer & Win ₹50 per correct answer.</p>
       <a class="btn" href="quiz.html">Play Quiz</a>
     </section>
     <section class="card">
-      <h2>🎁 Daily Bonus</h2>
-      <a class="btn" href="spin.html">Spin Now</a>
+      <h2>🎰 Daily Bonus</h2>
+      <a class="btn" href="spin.html">Spin & Earn</a>
+    </section>
+    <section class="card">
+      <h2>🌐 Online Players</h2>
+      <p id="aiStats"></p>
     </section>
   </main>
+
   <footer>
     <p>&copy; 2025 SkillCash. All rights reserved.</p>
   </footer>
-  <!-- ✅ Consent Banner START -->
-<div id="consent-banner" style="position: fixed; bottom: 0; width: 100%; background: #222; color: white; text-align: center; padding: 1rem; z-index: 9999;">
-  We use cookies and ads to improve your experience. By continuing, you agree to our 
-  <a href="privacy.html" style="color: #ffcc00;">Privacy Policy</a>.
-  <button onclick="acceptConsent()" style="margin-left: 10px; background: #ffcc00; border: none; padding: 5px 10px; border-radius: 4px;">Accept</button>
-</div>
 
 <script>
-function acceptConsent() {
-  localStorage.setItem("consentGiven", "yes");
-  document.getElementById("consent-banner").style.display = "none";
+function simulateAI() {
+  let realPlayers = Math.floor(Math.random() * 5000) + 10000;
+  let aiPlayers = Math.floor(Math.random() * 40000) + 100000;
+  document.getElementById("aiStats").innerHTML =
+    `<strong>Real Players Online:</strong> ${realPlayers}<br><strong>AI Players Online:</strong> ${aiPlayers}<br><strong>Estimated Earnings Today:</strong> ₹${(aiPlayers * 2.5 + realPlayers * 5).toLocaleString()}`;
 }
-
-if (localStorage.getItem("consentGiven") === "yes") {
-  document.getElementById("consent-banner").style.display = "none";
-}
+simulateAI();
+setInterval(simulateAI, 3000);
 </script>
-<!-- ✅ Consent Banner END -->
 
 </body>
 </html>
