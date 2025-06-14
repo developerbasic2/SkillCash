@@ -1,1 +1,12 @@
 <!DOCTYPE html><html><head><title>Spin</title></head><body><h1>Spin and Win</h1></body></html>
+<h2>🎰 Spin & Win</h2>
+<p>Click below to spin and win bonus up to ₹100</p>
+<button onclick="spin()">Spin Now</button>
+<p id="bonus"></p>
+
+<script>
+function spin() {
+  let reward = Math.floor(Math.random() * 100) + 1;
+  document.getElementById('bonus').innerText = "You won ₹" + reward + " bonus!";
+}
+</script>
