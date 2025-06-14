@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>SkillCash</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkillCash - Real Money Game</title>
+  <link rel="stylesheet" href="style.css"/>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2135039531380773"
-   crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="style.css">
-  </head>
+     crossorigin="anonymous"></script>
+</head>
 <body>
   <header>
     <h1>💰 SkillCash</h1>
-    <p>Play to Earn Real Money | ₹50 per quiz | Daily Bonus | Withdraw via UPI</p>
+    <p>Win ₹50 per correct answer. Daily rewards & UPI withdrawals!</p>
     <nav>
       <a href="quiz.html">Quiz</a>
       <a href="wallet.html">Wallet</a>
@@ -18,32 +19,20 @@
       <a href="admin.html">Admin</a>
     </nav>
   </header>
- <!-- ✅ Paste your ad box here -->
-  <ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-2135039531380773"
-    data-ad-slot="1234567890"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-  <!-- ✅ Done -->
-
 
   <main>
     <section class="card">
-      <h2>🎮 Start Playing!</h2>
-      <p>Answer & Win ₹50 per correct answer.</p>
-      <a class="btn" href="quiz.html">Play Quiz</a>
+      <h2>🎮 Start Earning</h2>
+      <p>Play quiz and win ₹50 instantly.</p>
+      <a class="btn" href="quiz.html">Play Now</a>
     </section>
     <section class="card">
-      <h2>🎰 Daily Bonus</h2>
-      <a class="btn" href="spin.html">Spin & Earn</a>
+      <h2>🎰 Spin & Win</h2>
+      <a class="btn" href="spin.html">Spin Now</a>
     </section>
     <section class="card">
-      <h2>🌐 Online Players</h2>
-      <p id="aiStats"></p>
+      <h2>🧠 Active Players</h2>
+      <p>Total Players Online: <span id="players">Loading...</span></p>
     </section>
   </main>
 
@@ -52,16 +41,12 @@
   </footer>
 
 <script>
-function simulateAI() {
-  let realPlayers = Math.floor(Math.random() * 5000) + 10000;
-  let aiPlayers = Math.floor(Math.random() * 40000) + 100000;
-  document.getElementById("aiStats").innerHTML =
-    `<strong>Real Players Online:</strong> ${realPlayers}<br><strong>AI Players Online:</strong> ${aiPlayers}<br><strong>Estimated Earnings Today:</strong> ₹${(aiPlayers * 2.5 + realPlayers * 5).toLocaleString()}`;
+function simulateUsers() {
+  let mix = Math.floor(Math.random() * 10000) + 10000;
+  document.getElementById("players").innerText = mix.toLocaleString();
 }
-  <!-- <p>AI Players Online: 100000</p> -->
-  <p>Total Players Online: 150,000+</p> <!-- Mix of real + AI -->
-simulateAI();
-setInterval(simulateAI, 3000);
+simulateUsers();
+setInterval(simulateUsers, 4000);
 </script>
 
 </body>
