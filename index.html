@@ -30,9 +30,6 @@
   </script>
   <!-- ✅ Done -->
 
-  <footer>
-    <p>&copy; 2025 SkillCash. All rights reserved.</p>
-  </footer>
 
   <main>
     <section class="card">
@@ -61,6 +58,8 @@ function simulateAI() {
   document.getElementById("aiStats").innerHTML =
     `<strong>Real Players Online:</strong> ${realPlayers}<br><strong>AI Players Online:</strong> ${aiPlayers}<br><strong>Estimated Earnings Today:</strong> ₹${(aiPlayers * 2.5 + realPlayers * 5).toLocaleString()}`;
 }
+  <!-- <p>AI Players Online: 100000</p> -->
+  <p>Total Players Online: 150,000+</p> <!-- Mix of real + AI -->
 simulateAI();
 setInterval(simulateAI, 3000);
 </script>
